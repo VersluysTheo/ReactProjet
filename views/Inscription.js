@@ -67,13 +67,16 @@ export default function Inscription() {
         secureTextEntry
       />
       <View style={styles.checkboxContainer}>
-        <TouchableOpacity onPress={() => setConditionsAcceptees(!conditionsAcceptees)}>
+        <TouchableOpacity  onPress={() => setConditionsAcceptees(!conditionsAcceptees)}>
           <Text style={styles.checkboxText}>
-            {conditionsAcceptees ? '☑️' : '◻️'} Accepter les conditions d'utilisation
+            {conditionsAcceptees ? '☑️' : '◻️'} En cochant la case, vous acceptez nos conditions générales d'utilisation ainsi que notre politique de confidentialité
           </Text>
         </TouchableOpacity>
       </View>
-      <Button title="S'inscrire" onPress={handleInscription} />
+      <TouchableOpacity style={styles.bouton} onPress={handleInscription}>
+        <Text style={styles.texteBouton}>S'inscrire</Text>
+        </TouchableOpacity>
+
       <TouchableOpacity>
         <Text style={styles.loginLink}>Déjà un compte ? Se connecter</Text>
       </TouchableOpacity>

@@ -13,7 +13,6 @@ export default StyleSheet.create({
     borderRadius: 5,
   },
   button: {
-    backgroundColor: 'red',
     marginTop: 10,
     marginBottom: 10,
   },

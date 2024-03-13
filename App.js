@@ -5,6 +5,7 @@ import TaskList from './views/TaskList';
 import TextScreen from './views/TextScreen';
 import LoginScreen from './views/LoginScreen';
 import Inscription from './views/Inscription';
+import Choix from './views/Choix';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Screen name="TextScreen" component={TextScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="Inscription" component={Inscription} />
+        <Stack.Screen name="Choix" component={Choix} />
       </Stack.Navigator>
     </NavigationContainer>
   );

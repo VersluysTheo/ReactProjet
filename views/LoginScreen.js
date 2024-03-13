@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Image, Text, TouchableOpacity } from 'react-native';
 import LogoImage from '../assets/Logo.png';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles/LoginScreenStyles';
 
@@ -8,6 +9,11 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const navigation = useNavigation();
+
+  const navigateToInscription = () => {
+    navigation.navigate('Inscription');
+  };
 
   const handleLogin = () => {
     // Connexion
@@ -27,7 +33,6 @@ export default function LoginScreen() {
       setErrorMessage('Veuillez entrer votre e-mail pour réinitialiser le mot de passe.');
     } else {
       // Simuler l'envoi d'un e-mail de réinitialisation
-      // Ici, vous pouvez appeler votre API ou service pour envoyer un e-mail de réinitialisation de mot de passe
       setErrorMessage('Un e-mail de réinitialisation du mot de passe a été envoyé à votre adresse e-mail.');
     }
   };
@@ -50,9 +55,14 @@ export default function LoginScreen() {
         placeholder="Mot de passe"
         secureTextEntry
       />
-      <Button title="Se connecter" onPress={handleLogin} />
+      <TouchableOpacity style={styles.bouton} onPress={handleLogin}>
+      <Text style={styles.texteBouton}>Se Connecter</Text>
+      </TouchableOpacity>
       <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPasswordText}>Mot de passe oublié ?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={navigateToInscription}>
+        <Text style={styles.inscriptionText}>Pas de Compte ? S'incrire</Text>
       </TouchableOpacity>
       {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
     </View>

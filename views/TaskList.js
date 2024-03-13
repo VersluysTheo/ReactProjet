@@ -41,6 +41,10 @@ export default function TaskList() {
     navigation.navigate('Inscription');
   };
 
+  const navigateToChoix = () => {
+    navigation.navigate('Choix');
+  };
+
   return (
     <View style={styles.container}>
       <TextInput
@@ -61,6 +65,7 @@ export default function TaskList() {
       <TouchableOpacity style={styles.button}><Button title="Aller vers le texte" onPress={navigateToTextScreen} /></TouchableOpacity>
       <TouchableOpacity style={styles.button}><Button title="Se connecter" onPress={navigateToLoginScreen} /></TouchableOpacity>
       <TouchableOpacity style={styles.button}><Button title="S'inscrire" onPress={navigateToInscription} /></TouchableOpacity>
+      <TouchableOpacity style={styles.button}><Button title="Vers Choix" onPress={navigateToChoix} /></TouchableOpacity>
     </View>
   );
 }
