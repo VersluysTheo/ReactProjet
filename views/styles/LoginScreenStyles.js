@@ -1,12 +1,25 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+
+  // containers style
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
+
+  inscrContainer:{
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  checkboxContainer:{
+    marginTop: 10,
+  },
+
+  // inputs style
   input: {
     backgroundColor: 'F5F5F5',
     color: '#97989D',
@@ -22,21 +35,9 @@ export default StyleSheet.create({
     height: 60,
     marginBottom: 20,
   },
-  forgotPasswordText: {
-    marginTop: 10,
-    color: '#F33803',
-    textDecorationLine: 'underline',
-    marginBottom: 10,
-  },
-  errorMessage: {
-    color: 'red',
-    marginTop: 10,
-  },
 
-  inscriptionText:{
-    textDecorationLine: 'underline',
-  },
 
+  // Boutons
   bouton: {
     backgroundColor: '#F33803',
     borderRadius: 10, 
@@ -49,10 +50,27 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center', 
   },
-  
+
+  // Textes
+
+  forgotPasswordText: {
+    marginTop: 10,
+    color: '#F33803',
+    textDecorationLine: 'underline',
+    marginBottom: 10,
+  },
+  errorMessage: {
+    color: 'red',
+    marginTop: 10,
+  },
+
   texteBouton: {
     color: 'white',
     fontSize: 16,
+  },
+  inscriptionText:{
+    textDecorationLine: 'underline',
+    color: '#F33803',
   },
   
 });

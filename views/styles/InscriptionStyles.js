@@ -3,12 +3,21 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+
+  // Container Style
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
+
+  containerText:{
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  //Input 
   input: {
     backgroundColor: 'F5F5F5',
     color: '#97989D',
@@ -19,6 +28,8 @@ export default StyleSheet.create({
     borderRadius: 5,
     width: '100%',
   },
+
+  // Checkbox
   checkboxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -29,11 +40,18 @@ export default StyleSheet.create({
     marginLeft: 8,
     
   },
+
+  // Login Texte et Link
+  loginText:{
+    marginTop: 10,
+  },
   loginLink: {
     marginTop: 10,
     color: '#F33803',
     textDecorationLine: 'underline',
   },
+
+  // Bouton
   bouton: {
     backgroundColor: '#F33803',
     borderRadius: 10, 
@@ -47,6 +65,7 @@ export default StyleSheet.create({
     justifyContent: 'center', 
   },
   
+  // Texte des boutons 
   texteBouton: {
     color: 'white',
     fontSize: 16,

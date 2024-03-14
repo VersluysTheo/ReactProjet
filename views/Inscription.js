@@ -77,8 +77,9 @@ export default function Inscription() {
         <Text style={styles.texteBouton}>S'inscrire</Text>
         </TouchableOpacity>
 
-      <TouchableOpacity>
-        <Text style={styles.loginLink}>Déjà un compte ? Se connecter</Text>
+      <TouchableOpacity style={styles.containerText}>
+        <Text style={styles.loginText}>Deja un compte ? </Text>
+        <Text style={styles.loginLink}>Se connecter</Text>
       </TouchableOpacity>
     </View>
   );

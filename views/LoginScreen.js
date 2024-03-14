@@ -9,6 +9,7 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [rememberme, setRememberme ] = useState(false);
   const navigation = useNavigation();
 
   const navigateToInscription = () => {
@@ -58,11 +59,19 @@ export default function LoginScreen() {
       <TouchableOpacity style={styles.bouton} onPress={handleLogin}>
       <Text style={styles.texteBouton}>Se Connecter</Text>
       </TouchableOpacity>
+      <View style={styles.checkboxContainer}>
+        <TouchableOpacity  onPress={() => setRememberme(!rememberme)}>
+          <Text style={styles.checkboxText}>
+            {rememberme ? '☑️' : '◻️'} Se souvenir de moi
+          </Text>
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPasswordText}>Mot de passe oublié ?</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={navigateToInscription}>
-        <Text style={styles.inscriptionText}>Pas de Compte ? S'incrire</Text>
+      <TouchableOpacity style={styles.inscrContainer} onPress={navigateToInscription}>
+        <Text style={styles.noAccountText}>Pas de Compte ? </Text>
+        <Text style={styles.inscriptionText}>S'inscrire</Text>
       </TouchableOpacity>
       {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
     </View>
