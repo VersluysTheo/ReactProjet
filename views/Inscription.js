@@ -81,6 +81,6 @@ export default function Inscription() {
         <Text style={styles.loginText}>Deja un compte ? </Text>
         <Text style={styles.loginLink}>Se connecter</Text>
       </TouchableOpacity>
-    </View>
+    </View> 
   );
 }
